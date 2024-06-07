@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_section_stories",
+  "info": {
+    "displayName": "story",
+    "icon": "layout"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "storyCard": {
+      "displayName": "storyCard",
+      "type": "component",
+      "repeatable": true,
+      "component": "content.story-card"
+    }
+  }
+}

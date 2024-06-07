@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_content_list_cards",
+  "info": {
+    "displayName": "listCard",
+    "icon": "layout"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "bleu",
+        "bleu foncé",
+        "violet"
+      ]
+    },
+    "item": {
+      "displayName": "listCardItem",
+      "type": "component",
+      "repeatable": true,
+      "component": "content.list-card-item"
+    }
+  }
+}

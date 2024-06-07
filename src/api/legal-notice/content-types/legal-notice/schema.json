@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "legal_notices",
+  "info": {
+    "singularName": "legal-notice",
+    "pluralName": "legal-notices",
+    "displayName": "legal notice",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "blocks"
+    },
+    "metas": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta"
+    }
+  }
+}

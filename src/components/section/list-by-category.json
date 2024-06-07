@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_section_list_by_categories",
+  "info": {
+    "displayName": "listByCategory",
+    "icon": "layout",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Text": {
+      "type": "blocks"
+    },
+    "listCard": {
+      "displayName": "listCard",
+      "type": "component",
+      "repeatable": true,
+      "component": "content.list-card"
+    }
+  }
+}

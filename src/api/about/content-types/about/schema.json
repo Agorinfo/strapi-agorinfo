@@ -1,0 +1,54 @@
+{
+  "kind": "singleType",
+  "collectionName": "abouts",
+  "info": {
+    "singularName": "about",
+    "pluralName": "abouts",
+    "displayName": "Qui somme-nous",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroContent": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content.content-block"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "expertises": {
+      "displayName": "expertise",
+      "type": "component",
+      "repeatable": false,
+      "component": "section.expertise"
+    },
+    "story": {
+      "displayName": "story",
+      "type": "component",
+      "repeatable": false,
+      "component": "section.story"
+    },
+    "testimonials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content.testimonial-card"
+    },
+    "metas": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta"
+    }
+  }
+}

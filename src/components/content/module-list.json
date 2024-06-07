@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_content_module_lists",
+  "info": {
+    "displayName": "moduleList",
+    "icon": "layout"
+  },
+  "options": {},
+  "attributes": {
+    "listItem": {
+      "type": "string"
+    }
+  }
+}

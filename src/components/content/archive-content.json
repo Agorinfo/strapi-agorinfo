@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_content_archive_contents",
+  "info": {
+    "displayName": "archiveContent",
+    "icon": "layer",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "teaser": {
+      "type": "text"
+    },
+    "text": {
+      "type": "blocks"
+    },
+    "label": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "reassuranceSolution": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content.content-block"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content.call-to-action"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "metas": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta"
+    }
+  }
+}

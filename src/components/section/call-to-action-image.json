@@ -1,0 +1,62 @@
+{
+  "collectionName": "components_section_call_to_action_images",
+  "info": {
+    "displayName": "callToActionImage",
+    "icon": "layout",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "label": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "background": {
+      "type": "enumeration",
+      "enum": [
+        "bleu",
+        "gris"
+      ],
+      "default": "bleu",
+      "required": true
+    },
+    "position": {
+      "type": "enumeration",
+      "enum": [
+        "image à gauche",
+        "image à droite"
+      ],
+      "default": "image à droite",
+      "required": true
+    },
+    "document": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

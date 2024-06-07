@@ -1,0 +1,132 @@
+{
+  "collectionName": "components_hero_hero_archives",
+  "info": {
+    "displayName": "heroArchive",
+    "icon": "layout",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "teaser": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "informationCard": {
+      "displayName": "informationCard",
+      "type": "component",
+      "repeatable": false,
+      "component": "content.information-card"
+    },
+    "moduleList": {
+      "displayName": "moduleList",
+      "type": "component",
+      "repeatable": true,
+      "component": "content.module-list"
+    },
+    "label": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "badge": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "medal",
+        "user",
+        "factory",
+        "buildings",
+        "mapPin",
+        "signpost",
+        "handshake",
+        "listChecks",
+        "certificate",
+        "knife",
+        "grains",
+        "calculator",
+        "storefront",
+        "headset",
+        "chatsTeardrop",
+        "devices",
+        "boardTeacher",
+        "planet",
+        "arrowLeft",
+        "arrowRight",
+        "instagram",
+        "check",
+        "bookmark",
+        "hardDrives",
+        "browsers",
+        "lifebuoy",
+        "numberOne",
+        "numberTwo",
+        "numberThree",
+        "x",
+        "caretDown",
+        "caretUp",
+        "desktopTower",
+        "gear",
+        "wrench",
+        "leaf",
+        "computerTower",
+        "database",
+        "checkCircle",
+        "twitter",
+        "linkedin",
+        "youtube",
+        "birthday",
+        "burger",
+        "business",
+        "cloudData",
+        "club",
+        "comptinnov",
+        "down",
+        "group",
+        "Lsa",
+        "logiviande",
+        "merge",
+        "silos",
+        "stepOne",
+        "stepTwo",
+        "stepThree",
+        "stepFour",
+        "team",
+        "checklist",
+        "listing",
+        "poligon",
+        "poligonTransparent",
+        "triangle",
+        "software",
+        "support",
+        "versioning"
+      ]
+    },
+    "background": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

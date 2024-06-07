@@ -1,0 +1,90 @@
+{
+  "collectionName": "components_section_steps",
+  "info": {
+    "displayName": "step",
+    "icon": "layout"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "medal",
+        "user",
+        "factory",
+        "buildings",
+        "mapPin",
+        "signpost",
+        "handshake",
+        "listChecks",
+        "certificate",
+        "knife",
+        "grains",
+        "calculator",
+        "storefront",
+        "headset",
+        "chatsTeardrop",
+        "boardTeacher",
+        "planet",
+        "arrowLeft",
+        "arrowRight",
+        "instagram",
+        "check",
+        "bookmark",
+        "hardDrives",
+        "browsers",
+        "lifebuoy",
+        "numberOne",
+        "numberTwo",
+        "numberThree",
+        "x",
+        "caretDown",
+        "caretUp",
+        "desktopTower",
+        "gear",
+        "wrench",
+        "leaf",
+        "computerTower",
+        "database",
+        "checkCircle",
+        "twitter",
+        "linkedin",
+        "youtube",
+        "birthday",
+        "burger",
+        "business",
+        "cloudData",
+        "club",
+        "comptinnov",
+        "down",
+        "group",
+        "Lsa",
+        "logiviande",
+        "merge",
+        "silos",
+        "stepOne",
+        "stepTwo",
+        "stepThree",
+        "stepFour",
+        "team",
+        "checklist",
+        "listing",
+        "poligon",
+        "poligonTransparent",
+        "triangle",
+        "software",
+        "support",
+        "versioning"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

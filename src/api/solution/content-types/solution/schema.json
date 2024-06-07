@@ -1,0 +1,125 @@
+{
+  "kind": "collectionType",
+  "collectionName": "solutions",
+  "info": {
+    "singularName": "solution",
+    "pluralName": "solutions",
+    "displayName": "Solutions",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "brandColor": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    },
+    "brandImg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "heroArchive": {
+      "type": "component",
+      "repeatable": false,
+      "component": "hero.hero-archive"
+    },
+    "reassurance": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.featured"
+    },
+    "HeroPage": {
+      "type": "component",
+      "repeatable": false,
+      "component": "hero.hero-slide"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content.call-to-action"
+    },
+    "features": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::feature.feature",
+      "mappedBy": "solution"
+    },
+    "FeaturesReleased": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content.features-list"
+    },
+    "newsletter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content.call-to-action"
+    },
+    "modules": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::module.module",
+      "mappedBy": "solution"
+    },
+    "featuresReleasedImg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "solutionComp": {
+      "displayName": "solutionComp",
+      "type": "component",
+      "repeatable": true,
+      "component": "content.solution-comp"
+    },
+    "shortDescription": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "chatsTeardrop",
+        "devices",
+        "boardTeacher",
+        "headset",
+        "knife",
+        "grains",
+        "storefront",
+        "calculator"
+      ]
+    },
+    "featureTitle": {
+      "type": "string"
+    },
+    "featureTeaser": {
+      "type": "text"
+    },
+    "metas": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta"
+    }
+  }
+}

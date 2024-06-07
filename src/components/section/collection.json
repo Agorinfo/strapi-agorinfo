@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_section_collections",
+  "info": {
+    "displayName": "collection",
+    "icon": "layout"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "collectionsLink": {
+      "type": "string"
+    },
+    "card": {
+      "displayName": "cardCollection",
+      "type": "component",
+      "repeatable": true,
+      "component": "content.card-collection"
+    }
+  }
+}

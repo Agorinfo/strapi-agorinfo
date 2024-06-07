@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_content_list_card_items",
+  "info": {
+    "displayName": "listCardItem",
+    "icon": "layout"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    }
+  }
+}

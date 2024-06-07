@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_hero_hero_slides",
+  "info": {
+    "displayName": "HeroSlide",
+    "icon": "layout",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "displayName": "contentBlock",
+      "type": "component",
+      "repeatable": false,
+      "component": "content.content-block"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

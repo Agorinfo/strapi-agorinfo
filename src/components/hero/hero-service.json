@@ -1,0 +1,47 @@
+{
+  "collectionName": "components_hero_hero_services",
+  "info": {
+    "displayName": "heroService",
+    "icon": "layout",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "chatsTeardrop",
+        "devices",
+        "boardTeacher",
+        "headset"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "teaser": {
+      "type": "text"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

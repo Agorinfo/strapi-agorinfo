@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_content_counts",
+  "info": {
+    "displayName": "count",
+    "icon": "layer"
+  },
+  "options": {},
+  "attributes": {
+    "number": {
+      "type": "biginteger"
+    },
+    "expertise": {
+      "type": "string"
+    }
+  }
+}

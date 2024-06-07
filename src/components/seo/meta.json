@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_seo_metas",
+  "info": {
+    "displayName": "meta",
+    "icon": "alien",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "meta_title": {
+      "type": "string",
+      "maxLength": 60,
+      "required": true
+    },
+    "meta_description": {
+      "type": "text",
+      "maxLength": 160,
+      "required": true
+    },
+    "shareImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "canonicalUrl": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

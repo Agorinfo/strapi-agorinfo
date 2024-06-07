@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "rgpds",
+  "info": {
+    "singularName": "rgpd",
+    "pluralName": "rgpds",
+    "displayName": "RGPD",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "blocks"
+    },
+    "tableData": {
+      "displayName": "table",
+      "type": "component",
+      "repeatable": true,
+      "component": "content.table"
+    },
+    "metas": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta"
+    }
+  }
+}

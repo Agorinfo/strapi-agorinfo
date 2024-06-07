@@ -1,0 +1,82 @@
+{
+  "kind": "singleType",
+  "collectionName": "globals",
+  "info": {
+    "singularName": "global",
+    "pluralName": "globals",
+    "displayName": "Configuration",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "canonical_url": {
+      "type": "string"
+    },
+    "siteName": {
+      "type": "string"
+    },
+    "favicon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "street": {
+      "type": "string"
+    },
+    "zipCode": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "tel": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "metas": {
+      "displayName": "meta",
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta"
+    },
+    "adressComp": {
+      "type": "string"
+    },
+    "archiveSolutions": {
+      "displayName": "archiveContent",
+      "type": "component",
+      "repeatable": false,
+      "component": "content.archive-content"
+    },
+    "archiveServices": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content.archive-content"
+    },
+    "NewsletterFormMessage": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_content_feature_tags",
+  "info": {
+    "displayName": "featureTags",
+    "icon": "layer"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    }
+  }
+}

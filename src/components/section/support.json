@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_section_supports",
+  "info": {
+    "displayName": "support",
+    "icon": "layout"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "content": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content.content-block"
+    }
+  }
+}

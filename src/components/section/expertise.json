@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_section_expertise",
+  "info": {
+    "displayName": "expertise",
+    "icon": "layout"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "counter": {
+      "displayName": "count",
+      "type": "component",
+      "repeatable": true,
+      "component": "content.count"
+    }
+  }
+}

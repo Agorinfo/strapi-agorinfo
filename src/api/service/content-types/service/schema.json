@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "Services",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroArchive": {
+      "type": "component",
+      "repeatable": false,
+      "component": "hero.hero-archive"
+    },
+    "hero": {
+      "displayName": "heroService",
+      "type": "component",
+      "repeatable": false,
+      "component": "hero.hero-service"
+    },
+    "step": {
+      "displayName": "step",
+      "type": "component",
+      "repeatable": true,
+      "component": "section.step"
+    },
+    "stepImg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "section.call-to-action-image"
+    },
+    "testimonial": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content.testimonial-card"
+    },
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "shortDescription": {
+      "type": "text"
+    },
+    "brandColor": {
+      "type": "string"
+    },
+    "badgeColor": {
+      "type": "string"
+    },
+    "metas": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta"
+    }
+  }
+}

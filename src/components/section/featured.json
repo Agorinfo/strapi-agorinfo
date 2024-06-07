@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_section_featureds",
+  "info": {
+    "displayName": "featured",
+    "icon": "layout",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "teaser": {
+      "type": "text"
+    },
+    "card": {
+      "displayName": "featuredCard",
+      "type": "component",
+      "repeatable": true,
+      "component": "content.featured-card"
+    }
+  }
+}

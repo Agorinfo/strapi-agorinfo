@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_content_information_cards",
+  "info": {
+    "displayName": "informationCard",
+    "icon": "layout"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "text"
+    }
+  }
+}

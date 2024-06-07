@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_content_details",
+  "info": {
+    "displayName": "details",
+    "icon": "layer",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "detail": {
+      "type": "blocks",
+      "required": true
+    }
+  }
+}
