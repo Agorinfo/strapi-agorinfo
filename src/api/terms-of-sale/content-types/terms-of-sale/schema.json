@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "legal_notices",
+  "collectionName": "terms_of_sales",
   "info": {
-    "singularName": "legal-notice",
-    "pluralName": "legal-notices",
-    "displayName": "Mentions légales",
+    "singularName": "terms-of-sale",
+    "pluralName": "terms-of-sales",
+    "displayName": "CGV",
     "description": ""
   },
   "options": {
