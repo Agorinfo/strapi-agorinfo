@@ -49,6 +49,9 @@
       "type": "component",
       "repeatable": false,
       "component": "seo.meta"
+    },
+    "teamDescription": {
+      "type": "blocks"
     }
   }
 }
