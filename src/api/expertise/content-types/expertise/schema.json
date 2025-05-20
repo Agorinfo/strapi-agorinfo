@@ -1,0 +1,61 @@
+{
+  "kind": "singleType",
+  "collectionName": "expertises",
+  "info": {
+    "singularName": "expertise",
+    "pluralName": "expertises",
+    "displayName": "Expertises",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroContent": {
+      "type": "blocks"
+    },
+    "expertises": {
+      "displayName": "expertise",
+      "type": "component",
+      "repeatable": true,
+      "component": "content.expertise"
+    },
+    "card": {
+      "displayName": "contentCard",
+      "type": "component",
+      "repeatable": true,
+      "component": "content.content-card"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content.call-to-action"
+    },
+    "labelButton": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "background": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "teaser": {
+      "type": "string"
+    },
+    "metas": {
+      "type": "component",
+      "repeatable": false,
+      "component": "seo.meta"
+    }
+  }
+}
