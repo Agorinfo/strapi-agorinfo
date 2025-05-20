@@ -28,7 +28,7 @@
     "cta": {
       "type": "component",
       "repeatable": false,
-      "component": "section.call-to-action-image"
+      "component": "content.call-to-action"
     }
   }
 }

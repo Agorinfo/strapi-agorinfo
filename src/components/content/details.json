@@ -11,8 +11,7 @@
       "type": "string"
     },
     "detail": {
-      "type": "blocks",
-      "required": true
+      "type": "text"
     }
   }
 }

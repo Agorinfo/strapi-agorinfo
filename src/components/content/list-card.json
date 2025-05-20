@@ -2,7 +2,8 @@
   "collectionName": "components_content_list_cards",
   "info": {
     "displayName": "listCard",
-    "icon": "layout"
+    "icon": "layout",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -14,7 +15,7 @@
       "enum": [
         "bleu",
         "bleu foncé",
-        "violet"
+        "vert"
       ]
     },
     "item": {

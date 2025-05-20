@@ -30,20 +30,14 @@
       "component": "content.call-to-action"
     },
     "images": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
-    },
-    "metas": {
-      "type": "component",
-      "repeatable": false,
-      "component": "seo.meta"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }
