@@ -77,6 +77,12 @@
     },
     "NewsletterFormMessage": {
       "type": "string"
+    },
+    "archiveRessources": {
+      "displayName": "archiveRessources",
+      "type": "component",
+      "repeatable": false,
+      "component": "content.archive-ressources"
     }
   }
 }

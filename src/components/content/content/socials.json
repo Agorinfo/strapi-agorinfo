@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_content_socials",
+  "info": {
+    "displayName": "socials",
+    "icon": "manyToMany"
+  },
+  "options": {},
+  "attributes": {
+    "social": {
+      "type": "enumeration",
+      "enum": [
+        "linkedin",
+        "instagram",
+        "facebook",
+        "twitter"
+      ]
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

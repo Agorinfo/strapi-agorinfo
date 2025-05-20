@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_content_content_cards",
+  "info": {
+    "displayName": "contentCard"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "blocks"
+    }
+  }
+}

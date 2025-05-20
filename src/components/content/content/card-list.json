@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_content_card_lists",
+  "info": {
+    "displayName": "CardList",
+    "icon": "layout",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "bleu",
+        "bleu foncé",
+        "violet"
+      ]
+    },
+    "text": {
+      "displayName": "cardlistItem",
+      "type": "component",
+      "repeatable": true,
+      "component": "content.cardlist-item"
+    }
+  }
+}

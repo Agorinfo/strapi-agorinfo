@@ -1,0 +1,87 @@
+{
+  "collectionName": "components_content_sub_nav_items",
+  "info": {
+    "displayName": "subNavItems",
+    "icon": "alien",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "arrowLeft",
+        "arrowRight",
+        "birthday",
+        "bookmarkSimple",
+        "boardTeacher",
+        "browsers",
+        "buildings",
+        "business",
+        "calculator",
+        "caretDown",
+        "caretUp",
+        "certificate",
+        "chatsTeardrop",
+        "check",
+        "checkCircle",
+        "checklist",
+        "cloudData",
+        "club",
+        "comptinnov",
+        "computerTower",
+        "database",
+        "down",
+        "desktopTower",
+        "factory",
+        "gear",
+        "grains",
+        "group",
+        "handshake",
+        "hardDrives",
+        "headset",
+        "instagram",
+        "lsa",
+        "knife",
+        "leaf",
+        "lifebuoy",
+        "linkedin",
+        "listChecks",
+        "listing",
+        "logiviande",
+        "mapPinLine",
+        "medal",
+        "merge",
+        "numberOne",
+        "numberThree",
+        "numberTwo",
+        "planet,",
+        "signpost",
+        "storefront",
+        "silos",
+        "software",
+        "stepFour",
+        "stepOne",
+        "stepThree",
+        "stepTwo",
+        "support",
+        "team",
+        "twitter",
+        "user",
+        "versioning",
+        "wrench",
+        "x",
+        "youtube"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

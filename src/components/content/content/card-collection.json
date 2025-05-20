@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_content_card_collections",
+  "info": {
+    "displayName": "cardCollection",
+    "icon": "layout"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}
