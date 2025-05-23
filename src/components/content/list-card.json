@@ -15,7 +15,7 @@
       "enum": [
         "bleu",
         "bleu foncé",
-        "vert"
+        "violet"
       ]
     },
     "item": {
