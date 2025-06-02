@@ -18,6 +18,20 @@ export interface ContentArchiveContent extends Schema.Component {
   };
 }
 
+export interface ContentArchiveRessources extends Schema.Component {
+  collectionName: 'components_content_archive_ressources';
+  info: {
+    displayName: 'archiveRessources';
+    description: '';
+  };
+  attributes: {
+    text: Attribute.Blocks;
+    image: Attribute.Media;
+    metas: Attribute.Component<'seo.meta'>;
+    cta: Attribute.Component<'section.call-to-action-image'>;
+  };
+}
+
 export interface ContentCallToAction extends Schema.Component {
   collectionName: 'components_content_call_to_actions';
   info: {
@@ -86,6 +100,17 @@ export interface ContentContentBlock extends Schema.Component {
   };
 }
 
+export interface ContentContentCard extends Schema.Component {
+  collectionName: 'components_content_content_cards';
+  info: {
+    displayName: 'contentCard';
+  };
+  attributes: {
+    title: Attribute.String;
+    text: Attribute.Blocks;
+  };
+}
+
 export interface ContentCount extends Schema.Component {
   collectionName: 'components_content_counts';
   info: {
@@ -108,6 +133,17 @@ export interface ContentDetails extends Schema.Component {
   attributes: {
     title: Attribute.String;
     detail: Attribute.Text;
+  };
+}
+
+export interface ContentExpertise extends Schema.Component {
+  collectionName: 'components_content_expertise';
+  info: {
+    displayName: 'expertise';
+  };
+  attributes: {
+    icon: Attribute.Media;
+    text: Attribute.Blocks;
   };
 }
 
@@ -259,6 +295,7 @@ export interface ContentListCard extends Schema.Component {
   info: {
     displayName: 'listCard';
     icon: 'layout';
+    description: '';
   };
   attributes: {
     tag: Attribute.String;
@@ -428,6 +465,19 @@ export interface ContentSubNavItems extends Schema.Component {
   };
 }
 
+export interface ContentTable extends Schema.Component {
+  collectionName: 'components_content_tables';
+  info: {
+    displayName: 'table';
+    icon: 'layout';
+  };
+  attributes: {
+    type: Attribute.String;
+    employeeData: Attribute.Boolean;
+    thirdPartyData: Attribute.Boolean;
+  };
+}
+
 export interface ContentTestimonialCard extends Schema.Component {
   collectionName: 'components_content_testimonial_cards';
   info: {
@@ -455,6 +505,17 @@ export interface ContentTitleList extends Schema.Component {
   attributes: {
     title: Attribute.String;
     listItem: Attribute.Component<'content.list-item', true>;
+  };
+}
+
+export interface FaqFaqItem extends Schema.Component {
+  collectionName: 'components_faq_faq_items';
+  info: {
+    displayName: 'faqItem';
+  };
+  attributes: {
+    answer: Attribute.Text;
+    response: Attribute.Text;
   };
 }
 
@@ -594,7 +655,7 @@ export interface SectionCallToActionImage extends Schema.Component {
     label: Attribute.String;
     url: Attribute.String;
     image: Attribute.Media;
-    background: Attribute.Enumeration<['bleu', 'gris']> &
+    background: Attribute.Enumeration<['bleu', 'bleu clair', 'gris']> &
       Attribute.Required &
       Attribute.DefaultTo<'bleu'>;
     position: Attribute.Enumeration<
@@ -602,6 +663,7 @@ export interface SectionCallToActionImage extends Schema.Component {
     > &
       Attribute.Required &
       Attribute.DefaultTo<'image \u00E0 droite'>;
+    document: Attribute.Media;
   };
 }
 
@@ -789,9 +851,18 @@ export interface SeoMeta extends Schema.Component {
     description: '';
   };
   attributes: {
-    meta_title: Attribute.String;
-    meta_description: Attribute.Text;
-    shareImage: Attribute.Media;
+    meta_title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 60;
+      }>;
+    meta_description: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 160;
+      }>;
+    shareImage: Attribute.Media & Attribute.Required;
+    canonicalUrl: Attribute.String & Attribute.Required;
   };
 }
 
@@ -799,13 +870,16 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'content.archive-content': ContentArchiveContent;
+      'content.archive-ressources': ContentArchiveRessources;
       'content.call-to-action': ContentCallToAction;
       'content.card-collection': ContentCardCollection;
       'content.card-list': ContentCardList;
       'content.cardlist-item': ContentCardlistItem;
       'content.content-block': ContentContentBlock;
+      'content.content-card': ContentContentCard;
       'content.count': ContentCount;
       'content.details': ContentDetails;
+      'content.expertise': ContentExpertise;
       'content.feature-details': ContentFeatureDetails;
       'content.feature-tags': ContentFeatureTags;
       'content.featured-card': ContentFeaturedCard;
@@ -820,8 +894,10 @@ declare module '@strapi/types' {
       'content.solution-comp': ContentSolutionComp;
       'content.story-card': ContentStoryCard;
       'content.sub-nav-items': ContentSubNavItems;
+      'content.table': ContentTable;
       'content.testimonial-card': ContentTestimonialCard;
       'content.title-list': ContentTitleList;
+      'faq.faq-item': FaqFaqItem;
       'hero.hero-archive': HeroHeroArchive;
       'hero.hero-service': HeroHeroService;
       'hero.hero-slide': HeroHeroSlide;

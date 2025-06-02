@@ -805,6 +805,8 @@ export interface ApiAboutAbout extends Schema.SingleType {
     expertises: Attribute.Component<'section.expertise'>;
     story: Attribute.Component<'section.story'>;
     testimonials: Attribute.Component<'content.testimonial-card', true>;
+    metas: Attribute.Component<'seo.meta'>;
+    teamDescription: Attribute.Blocks;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -893,6 +895,111 @@ export interface ApiActivityActivity extends Schema.CollectionType {
       'oneToOne',
       'admin::user'
     > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCategorieCategorie extends Schema.CollectionType {
+  collectionName: 'categories';
+  info: {
+    singularName: 'categorie';
+    pluralName: 'categories';
+    displayName: 'Cat\u00E9gories';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    slug: Attribute.UID<'api::categorie.categorie', 'name'>;
+    ressources: Attribute.Relation<
+      'api::categorie.categorie',
+      'oneToMany',
+      'api::ressource.ressource'
+    >;
+    color: Attribute.String &
+      Attribute.CustomField<'plugin::color-picker.color'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::categorie.categorie',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::categorie.categorie',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiExpertiseExpertise extends Schema.SingleType {
+  collectionName: 'expertises';
+  info: {
+    singularName: 'expertise';
+    pluralName: 'expertises';
+    displayName: 'Expertises';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    heroContent: Attribute.Blocks;
+    expertises: Attribute.Component<'content.expertise', true>;
+    card: Attribute.Component<'content.content-card', true>;
+    cta: Attribute.Component<'content.call-to-action'>;
+    labelButton: Attribute.String;
+    url: Attribute.String;
+    background: Attribute.Media;
+    teaser: Attribute.String;
+    metas: Attribute.Component<'seo.meta'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::expertise.expertise',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::expertise.expertise',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiFaqFaq extends Schema.SingleType {
+  collectionName: 'faqs';
+  info: {
+    singularName: 'faq';
+    pluralName: 'faqs';
+    displayName: 'Faqs';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    faqItems: Attribute.Component<'faq.faq-item', true>;
+    title: Attribute.String;
+    images: Attribute.Media;
+    cta: Attribute.Component<'content.call-to-action'>;
+    content: Attribute.Blocks;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::faq.faq', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::faq.faq', 'oneToOne', 'admin::user'> &
       Attribute.Private;
   };
 }
@@ -1009,6 +1116,8 @@ export interface ApiGlobalGlobal extends Schema.SingleType {
     adressComp: Attribute.String;
     archiveSolutions: Attribute.Component<'content.archive-content'>;
     archiveServices: Attribute.Component<'content.archive-content'>;
+    NewsletterFormMessage: Attribute.String;
+    archiveRessources: Attribute.Component<'content.archive-ressources'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1020,6 +1129,38 @@ export interface ApiGlobalGlobal extends Schema.SingleType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::global.global',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiLegalNoticeLegalNotice extends Schema.SingleType {
+  collectionName: 'legal_notices';
+  info: {
+    singularName: 'legal-notice';
+    pluralName: 'legal-notices';
+    displayName: 'Mentions l\u00E9gales';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Attribute.Blocks;
+    metas: Attribute.Component<'seo.meta'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::legal-notice.legal-notice',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::legal-notice.legal-notice',
       'oneToOne',
       'admin::user'
     > &
@@ -1091,6 +1232,104 @@ export interface ApiModuleModule extends Schema.CollectionType {
   };
 }
 
+export interface ApiPrivacyPolicyPrivacyPolicy extends Schema.SingleType {
+  collectionName: 'privacy_policies';
+  info: {
+    singularName: 'privacy-policy';
+    pluralName: 'privacy-policies';
+    displayName: 'Politique de confidentialit\u00E9';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Attribute.Blocks;
+    metas: Attribute.Component<'seo.meta'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::privacy-policy.privacy-policy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::privacy-policy.privacy-policy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiRessourceRessource extends Schema.CollectionType {
+  collectionName: 'ressources';
+  info: {
+    singularName: 'ressource';
+    pluralName: 'ressources';
+    displayName: 'Ressources';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    category: Attribute.Relation<
+      'api::ressource.ressource',
+      'manyToOne',
+      'api::categorie.categorie'
+    >;
+    content: Attribute.Blocks;
+    shortDescription: Attribute.Text;
+    slug: Attribute.UID<'api::ressource.ressource', 'title'>;
+    featuredImage: Attribute.Media;
+    metas: Attribute.Component<'seo.meta'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::ressource.ressource',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::ressource.ressource',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiRgpdRgpd extends Schema.SingleType {
+  collectionName: 'rgpds';
+  info: {
+    singularName: 'rgpd';
+    pluralName: 'rgpds';
+    displayName: 'RGPD';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Attribute.Blocks;
+    tableData: Attribute.Component<'content.table', true>;
+    metas: Attribute.Component<'seo.meta'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::rgpd.rgpd', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::rgpd.rgpd', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface ApiServiceService extends Schema.CollectionType {
   collectionName: 'services';
   info: {
@@ -1114,6 +1353,7 @@ export interface ApiServiceService extends Schema.CollectionType {
     shortDescription: Attribute.Text;
     brandColor: Attribute.String;
     badgeColor: Attribute.String;
+    metas: Attribute.Component<'seo.meta'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1182,6 +1422,7 @@ export interface ApiSolutionSolution extends Schema.CollectionType {
     >;
     featureTitle: Attribute.String;
     featureTeaser: Attribute.Text;
+    metas: Attribute.Component<'seo.meta'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1193,6 +1434,38 @@ export interface ApiSolutionSolution extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::solution.solution',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiTermsOfSaleTermsOfSale extends Schema.SingleType {
+  collectionName: 'terms_of_sales';
+  info: {
+    singularName: 'terms-of-sale';
+    pluralName: 'terms-of-sales';
+    displayName: 'CGV';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Attribute.Blocks;
+    metas: Attribute.Component<'seo.meta'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::terms-of-sale.terms-of-sale',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::terms-of-sale.terms-of-sale',
       'oneToOne',
       'admin::user'
     > &
@@ -1221,13 +1494,21 @@ declare module '@strapi/types' {
       'api::about.about': ApiAboutAbout;
       'api::accueil.accueil': ApiAccueilAccueil;
       'api::activity.activity': ApiActivityActivity;
+      'api::categorie.categorie': ApiCategorieCategorie;
+      'api::expertise.expertise': ApiExpertiseExpertise;
+      'api::faq.faq': ApiFaqFaq;
       'api::feature.feature': ApiFeatureFeature;
       'api::footer.footer': ApiFooterFooter;
       'api::global.global': ApiGlobalGlobal;
+      'api::legal-notice.legal-notice': ApiLegalNoticeLegalNotice;
       'api::menu.menu': ApiMenuMenu;
       'api::module.module': ApiModuleModule;
+      'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
+      'api::ressource.ressource': ApiRessourceRessource;
+      'api::rgpd.rgpd': ApiRgpdRgpd;
       'api::service.service': ApiServiceService;
       'api::solution.solution': ApiSolutionSolution;
+      'api::terms-of-sale.terms-of-sale': ApiTermsOfSaleTermsOfSale;
     }
   }
 }
