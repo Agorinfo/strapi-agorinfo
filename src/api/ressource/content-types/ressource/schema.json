@@ -46,6 +46,18 @@
       "type": "component",
       "repeatable": false,
       "component": "seo.meta"
+    },
+    "ctaTitle": {
+      "type": "string"
+    },
+    "ctaText": {
+      "type": "string"
+    },
+    "ctaLabelButton": {
+      "type": "string"
+    },
+    "ctaLink": {
+      "type": "string"
     }
   }
 }
