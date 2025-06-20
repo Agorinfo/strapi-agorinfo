@@ -1069,7 +1069,7 @@ export interface ApiFooterFooter extends Schema.SingleType {
     footerLinks: Attribute.Component<'content.title-list', true> &
       Attribute.SetMinMax<
         {
-          max: 4;
+          max: 5;
         },
         number
       >;
@@ -1287,6 +1287,10 @@ export interface ApiRessourceRessource extends Schema.CollectionType {
     slug: Attribute.UID<'api::ressource.ressource', 'title'>;
     featuredImage: Attribute.Media;
     metas: Attribute.Component<'seo.meta'>;
+    ctaTitle: Attribute.String;
+    ctaText: Attribute.String;
+    ctaLabelButton: Attribute.String;
+    ctaLink: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
